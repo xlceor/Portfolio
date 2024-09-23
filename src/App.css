@@ -1,0 +1,71 @@
+.bg-image {
+  background-image: url('./assets/image.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.shadow-effect {
+  box-shadow: 0 0 1000px 50px rgba(1, 195, 141, 1); /* Inicializa la sombra con un color */
+  animation: moveBackgroundShadow 20s linear infinite; /* La misma animación */
+}
+
+@keyframes moveBackgroundShadow {
+  0% {
+      box-shadow: 0 0 1000px 50px rgba(205, 57, 146, 1); /* Comienza con un color del gradiente */
+  }
+  25% {
+      box-shadow: 0 0 1000px 50px rgba(91, 157, 255, 1); /* Transición a otro color del gradiente */
+  }
+  50% {
+      box-shadow: 0 0 1000px 50px rgba(69, 232, 210, 1); /* Otro color del gradiente */
+  }
+  75% {
+      box-shadow: 0 0 1000px 50px rgba(94, 80, 220, 1); /* Transición de vuelta */
+  }
+  100% {
+      box-shadow: 0 0 1000px 50px rgba(205, 57, 146, 1); /* Y regresa al color inicial */
+  }
+}
+.icon {
+  /* background: linear-gradient(to right bottom, #5b9dff #cd3992); */
+  background: #0065fd;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+.moving-icon {
+  font-size: 5rem;
+  background-image: linear-gradient(135deg, #cd3992, #cd3992, #5b9dff, #45e8d2, #5b9dff, #cd3992, #5e50dc); /* Gradiente de violeta claro a menta */
+  background-size: 400% 400%; /* Aumenta el tamaño del gradiente para un bucle más suave */
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Hacemos el color del texto transparente para que el fondo se vea a través */
+  animation: moveBackground 20s linear infinite; /* Cambia a 'linear' para un movimiento constante */
+}
+
+
+.moving-background {
+  font-size: 5rem;
+  font-weight: bold;
+  color: transparent;
+  background-image: linear-gradient(135deg, #cd3992, #cd3992, #5b9dff, #45e8d2, #5b9dff, #cd3992, #5e50dc); /* Gradiente de violeta claro a menta */
+  background-size: 400% 400%; /* Aumenta el tamaño del gradiente para un bucle más suave */
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: moveBackground 20s linear infinite; /* Cambia a 'linear' para un movimiento constante */
+}
+
+@keyframes moveBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%; /* Mueve el fondo horizontalmente en el medio */
+  }
+  100% {
+      background-position: 0% 50%; /* Regresa al inicio para un bucle continuo */
+  }
+}
